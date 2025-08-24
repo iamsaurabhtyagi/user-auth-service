@@ -31,7 +31,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("Auth Service API")
                         .version("v1")
-                        .description("API documentation for User Services"))
+                        .description("API documentation for User Login Services"))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(securitySchemeName,
