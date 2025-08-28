@@ -1,8 +1,8 @@
 package com.bmt.auth.service;
 
 import com.bmt.auth.dao.UserDao;
-import com.bmt.exception.UserNotFoundException;
-import com.bmt.model.user.User;
+import com.common.exception.UserNotFoundException;
+import com.common.model.user.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

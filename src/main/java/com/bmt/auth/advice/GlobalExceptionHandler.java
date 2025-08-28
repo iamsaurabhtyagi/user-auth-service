@@ -1,6 +1,6 @@
 package com.bmt.auth.advice;
 
-import com.bmt.exception.ApiResponse;
+import com.common.response.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

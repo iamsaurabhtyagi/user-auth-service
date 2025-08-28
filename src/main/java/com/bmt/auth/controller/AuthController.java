@@ -4,7 +4,7 @@ import com.bmt.auth.security.JwtUtil;
 import com.bmt.auth.service.CustomUserDetailsService;
 import com.bmt.auth.view.request.AuthRequest;
 import com.bmt.auth.view.response.AuthResponse;
-import com.bmt.exception.ApiResponse;
+import com.common.response.ApiResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
