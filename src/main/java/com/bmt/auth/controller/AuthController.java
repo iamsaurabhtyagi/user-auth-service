@@ -4,6 +4,7 @@ import com.bmt.auth.security.JwtUtil;
 import com.bmt.auth.service.CustomUserDetailsService;
 import com.bmt.auth.view.request.AuthRequest;
 import com.bmt.auth.view.response.AuthResponse;
+import com.common.model.user.User;
 import com.common.response.ApiResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -37,8 +38,9 @@ public class AuthController {
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );
 
-        UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
-        String token = jwtUtil.generateToken(userDetails);
+        //UserDetails userDetails = (UserDetails) auth.getPrincipal();
+        User user = userDetailsService.getUserByUsername(request.getUsername());
+        String token = jwtUtil.generateTokenForUser(request.getUsername(), user);
 
         return ResponseEntity.ok(ApiResponse.success("Login Success", new AuthResponse(token)));
     }
